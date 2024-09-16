@@ -13,7 +13,7 @@ Ford-Johnson Sort is an efficient hybrid sorting algorithm that combines princip
 ### Explanation of the Recursive Function
 
 ```c
-function mergeInsertion(pairList):
+function recursionSort(pairList):
     // Step 1: Create a container for new pairs
     newTab = createEmptyContainer()
 
@@ -33,23 +33,21 @@ function mergeInsertion(pairList):
         sort the pair
 
     // Step 4: Recursively sort the new pairs
-    output = mergeInsertion(newTab)
+    output = recursionSort(newTab)
+
+
+
     sortedList = createEmptyContainer()
 
-    // Step 5: Merge results
-    for each pair in output:
-        if the pair has remaining elements:
-            remember the remaining element
-        add the maximum element of the pair to sortedList
+    // Step 5: Insert the min
     add the minimum element of the last pair in output to sortedList
 
-    // Step 6: Insert remaining elements
+    // Step 6: Insert remaining elements, handling cases where the list has an odd number of elements
     if there are remaining elements:
         find the correct position in sortedList
         insert the remaining element
 
-    // Step 7: Insert elements using Jacobsthal sequence
-    jacobIndex = 1
+    // Step 7: Insert all remaining elements using the Jacobsthal sequence   
     while insertion is needed:
         calculate the position using Jacobsthal sequence
         insert elements at the calculated positions in sortedList
