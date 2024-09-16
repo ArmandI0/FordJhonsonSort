@@ -9,3 +9,52 @@ Ford-Johnson Sort is an efficient hybrid sorting algorithm that combines princip
 ## My implementation of Ford–Johnson algorithm
 
 [View My Implementation Diagram](https://armandi0.github.io/FordJhonsonSort/CPP-09.drawio.html)
+
+### Explanation of the Recursive Function
+
+```c
+function mergeInsertion(pairList):
+    // Step 1: Create a container for new pairs
+    newTab = createEmptyContainer()
+
+    // Step 2: Combine adjacent pairs
+    if size(pairList) <= 1:
+        return pairList
+    for each pair in pairList:
+        if there is a next adjacent pair:
+            create a new pair from the current and next pair
+            add this new pair to newTab
+            skip to the pair after the next one
+        else:
+            add the remaining element of the current pair to the last new pair in newTab
+
+    // Step 3: Sort the new pairs
+    for each pair in newTab:
+        sort the pair
+
+    // Step 4: Recursively sort the new pairs
+    output = mergeInsertion(newTab)
+    sortedList = createEmptyContainer()
+
+    // Step 5: Merge results
+    for each pair in output:
+        if the pair has remaining elements:
+            remember the remaining element
+        add the maximum element of the pair to sortedList
+    add the minimum element of the last pair in output to sortedList
+
+    // Step 6: Insert remaining elements
+    if there are remaining elements:
+        find the correct position in sortedList
+        insert the remaining element
+
+    // Step 7: Insert elements using Jacobsthal sequence
+    jacobIndex = 1
+    while insertion is needed:
+        calculate the position using Jacobsthal sequence
+        insert elements at the calculated positions in sortedList
+        update jacobIndex
+
+    // Step 8: Return the sorted result
+    return sortedList
+```
