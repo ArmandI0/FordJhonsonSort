@@ -12,6 +12,8 @@ Ford-Johnson Sort is an efficient hybrid sorting algorithm that combines princip
 
 ### Explanation of the Recursive Function
 
+Note : The pseudo-code below is an example that follows my logic and the way I implemented the project.
+
 ```c
 function recursionSort(pairList):
     // Step 1: Create a container for new pairs
@@ -56,3 +58,7 @@ function recursionSort(pairList):
     // Step 8: Return the sorted result
     return sortedList
 ```
+
+#### Ressources : 
+
+https://en.wikipedia.org/wiki/Merge-insertion_sort
