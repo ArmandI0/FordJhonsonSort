@@ -4,8 +4,8 @@ Ford-Johnson Sort is an efficient hybrid sorting algorithm that combines princip
 
 ## Generic Example of Ford–Johnson algorithm
 
-[View Generic Example Diagram](./FordJhonsonSort.drawio.html)
+[View Generic Example Diagram](https://armandi0.github.io/FordJhonsonSort/FordJhonsonSort.drawio.html)
 
 ## My implementation of Ford–Johnson algorithm
 
-[View My Implementation Diagram](./CPP-09.drawio.html)
+[View My Implementation Diagram](https://armandi0.github.io/FordJhonsonSort/CPP-09.drawio.html)
